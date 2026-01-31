@@ -3,7 +3,7 @@ package com.test.springtesting.test;
 import com.test.springtesting.model.entity.Pet;
 import com.test.springtesting.repository.PetRepository;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;  // Changed from BeforeAll
+import org.junit.jupiter.api.BeforeEach; 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,17 +44,41 @@ public class PetTesting {
         Pet pet4 = new Pet();
         pet4.setAge(3);
         pet4.setName("pet4");
-        pet4.setBreed("Dog");
+        pet4.setBreed("Goat");
         pet4.setGender("F");
 
-        petRepository.saveAll(List.of(pet1, pet2, pet3, pet4));
+        Pet pet5 = new Pet();
+        pet5.setAge(3);
+        pet5.setName("pet5");
+        pet5.setBreed("Cat");
+        pet5.setGender("M");
+
+        Pet pet6 = new Pet();
+        pet6.setAge(5);
+        pet6.setName("pet6");
+        pet6.setBreed("Goat");
+        pet6.setGender("F");
+
+        Pet pet7 = new Pet();
+        pet7.setAge(4);
+        pet7.setName("pet7");
+        pet7.setBreed("Dog");
+        pet7.setGender("M");
+
+        Pet pet8 = new Pet();
+        pet8.setAge(3);
+        pet8.setName("pet8");
+        pet8.setBreed("Goat");
+        pet8.setGender("F");
+
+        petRepository.saveAll(List.of(pet1, pet2, pet3, pet4, pet5, pet6, pet7, pet8));
     }
 
     @Test
     void testSave_Success() {
         Pet newPet = new Pet();
         newPet.setAge(3);
-        newPet.setName("pet5");  // Consider changing to pet5 to avoid duplicate
+        newPet.setName("pet9");  // Consider changing to pet9 to avoid duplicate
         newPet.setBreed("Dog");
         newPet.setGender("F");
 
